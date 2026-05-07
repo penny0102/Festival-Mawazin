@@ -1,4 +1,4 @@
-export function Cards({name,  image, time, id, setRem}){
+export function Cards({name,  image, time, id, setRem, buttonName, classNameConfige}){
     return (
         <>
         <div className=''>
@@ -9,7 +9,7 @@ export function Cards({name,  image, time, id, setRem}){
             <div className='bg-[#282d67] rounded-2xl text-center py-4 px-5 font-mono mt-5 h-60 shadow-md shadow-black'>
                 <h1 className='text-white'>{name}</h1>
                 <h1 className='mt-10 text-white'>{time}</h1>
-                <button className='text-white px-10 py-0.5 bg-blue-500 rounded-2xl mt-20' onClick={() => setRem(id)}>add</button>
+                <button className={classNameConfige} onClick={() => setRem(id)}>{buttonName}</button>
             </div>
         </div>
         </>

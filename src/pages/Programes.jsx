@@ -6,8 +6,13 @@ export function Programes(){
     
     
     return (
-        <div className="flex gap-5 justify-center">
-            
+        <div >
+            <ul className="flex gap-5 justify-center">
+                <li>labob</li>
+                <li>labob</li>
+                <li>labob</li>
+                <li>labob</li>
+            </ul>
         </div>   
     )
 }

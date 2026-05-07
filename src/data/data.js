@@ -34,3 +34,12 @@ import drake from '../assets/artist/OIP-976544070.jpg'
   ]
 
 export default num
+
+
+
+function main(name, age){
+  console.log(name)
+  console.log(age)
+}
+
+main('mohammed', 19)
