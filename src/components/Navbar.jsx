@@ -10,10 +10,10 @@ export default function Navbar(){
                     <img src={logo} alt="" />
                 </div>
                 <ul className="flex gap-10 ms-auto text-xl">
-                    <NavLink to="/">Home</NavLink>
-                    <NavLink to="/programmes">Programes</NavLink>
-                    <NavLink to="/planning">Planning</NavLink>
-                    <NavLink to="/passeport">Passeport</NavLink>
+                    <NavLink to="/">🏠Home</NavLink>
+                    <NavLink to="/programmes">🗓️Programes</NavLink>
+                    <NavLink to="/planning">📝Planning</NavLink>
+                    <NavLink to="/passeport">📃Passeport</NavLink>
                     
                 </ul>
             </div>

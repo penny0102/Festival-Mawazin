@@ -1,15 +1,10 @@
 import image from "../assets/img.jpg";
 import playlmg from "../assets/playImg.jpg";
-import num from "../data/data";
-import { Cards } from "../components/Card";
+import haf1 from '../assets/7-49.jpg'
+import haf2 from '../assets/P191.jpg'
+import haf3 from '../assets/Ph1-63.jpg'
 
-function setStorage(id) {
-  const storage = JSON.parse(localStorage.getItem("fav")) || [];
 
-  if (storage.includes(id)) return;
-  storage.push(id);
-  localStorage.setItem("fav", JSON.stringify(storage));
-}
 
 function Home() {
   return (
@@ -17,7 +12,7 @@ function Home() {
       <div className="flex justify-center">
         <img className="w-300 h-140 shadow-md shadow-black" src={image} />
       </div>
-      <div className="flex justify-center mt-20 bg">
+      <div className="flex justify-center mt-20 ">
         <img
           className="flex w-230 h-120 shadow-md shadow-black"
           src={playlmg}
@@ -28,22 +23,12 @@ function Home() {
         <h1 className="mt-30 text-white">STAGES</h1>
       </div>
 
-      <div className="flex gap-30  mt-30 ml-55 font-mono">
-        {num.slice(0, 3).map((data) => (
-          <Cards
-            key={data.id}
-            name={data.name}
-            image={data.image}
-            time={data.time}
-            id={data.id}
-            setRem={setStorage}
-            buttonName={"add"}
-            classNameConfige={
-              "text-white px-10 py-0.5 bg-blue-500 rounded-2xl mt-20"
-            }
-          />
-        ))}
+      <div className="flex gap-30 w-100 h-50 mt-20 ml-25 font-mono ">
+        <img className="shadow-lg shadow-black rounded-xl hover:translate-y-2 hover:scale-[1.05] duration-500" src={haf1} alt="" />
+        <img className="shadow-lg shadow-black rounded-xl hover:translate-y-2 hover:scale-[1.05] duration-500" src={haf2} alt="" />
+        <img className="shadow-lg shadow-black rounded-xl hover:translate-y-2 hover:scale-[1.05] duration-500" src={haf3} alt="" />
       </div>
+
       <div className="mt-20">
         <nav className="flex gap-20 justify-center text-white py-5">
           <a href="https://github.com/penny0102">Github</a>

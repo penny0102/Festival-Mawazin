@@ -2,7 +2,7 @@ import sa3d from '../assets/artist/sa3d.jpg'
 import morphine from '../assets/artist/oardefault.jpg'
 import freanch from '../assets/artist/OIP-4136016057.jpg'
 import drake from '../assets/artist/OIP-976544070.jpg'
-
+import KendrickLamar from '../assets/artist/Kendrick_Lamar.jpg'
 
 
 
@@ -30,16 +30,13 @@ import drake from '../assets/artist/OIP-976544070.jpg'
       name : 'Drake',
       image : drake,
       time : '20/8/2026'
+    },
+    {
+      id: 5,
+      name: "Kendrick Lamar",
+      image: KendrickLamar,
+      time: '11/8/2026'
     }
   ]
 
 export default num
-
-
-
-function main(name, age){
-  console.log(name)
-  console.log(age)
-}
-
-main('mohammed', 19)

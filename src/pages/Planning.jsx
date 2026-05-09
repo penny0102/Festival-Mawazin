@@ -2,18 +2,20 @@ import num from "../data/data";
 import { Cards } from "../components/Card";
 import { useState, useEffect } from "react";
 
+
+
+
 function removeElement(id) {
   const data = JSON.parse(localStorage.getItem("fav"));
 
   let newArry = data.filter((line) => line !== id);
 
   localStorage.setItem("fav", JSON.stringify(newArry));
-  return newArry;
 }
 
 export function Planning() {
   const [favArtist, setFavArtist] = useState(
-    JSON.parse(localStorage.getItem("fav")) ?? [],
+    JSON.parse(localStorage.getItem("fav")) || [],
   );
 
   const [data, setData] = useState([]);
@@ -25,13 +27,18 @@ export function Planning() {
   if (!favArtist.length){
     return (
       <div className="flex justify-center ">
-        <p className="text-white text-2xl">No artist</p>
+        <p className="text-white text-2xl font-mono">No artist</p>
       </div>
     );
   }
 
   return (
-    <div className="flex gap-5 justify-center">
+    <>
+    
+    <h1 className="flex justify-center tra">Planning Artist</h1>
+    <div className="flex gap-5 justify-center mt-20">
+
+     
       {data.map((favori) => (
         <Cards
           key={favori.id}
@@ -44,11 +51,13 @@ export function Planning() {
             removeElement(id);
           }}
           classNameConfige={
-            "text-white px-10 py-0.5 bg-red-500 rounded-2xl mt-20"
+            "text-white px-10 py-0.5 bg-red-500 rounded-2xl mt-13 border-2 "
           }
           buttonName={"remove"}
         />
       ))}
     </div>
+      </>
   );
+
 }
