@@ -11,14 +11,17 @@ const Login = () => {
 
     function getFormData(){
         const data = JSON.parse(localStorage.getItem("user")) || {};
-        if(!data) {
+        if(!data || data.isLogedIn) {
             alert("no data");
         }else{
             if(email !== data.email || password !== data.password || !email || !password){
                 alert('relode');
             }else{
-                alert('login sec')
-                localStorage.setItem(JSON.stringify({...data, isLogedIn: true}))
+                //alert('login sec')
+                data.isLogedIn = true;
+                console.log(data)
+                localStorage.setItem('user', JSON.stringify(data))
+                console.log('nono')
                 usenavigate('/')
             }
         }

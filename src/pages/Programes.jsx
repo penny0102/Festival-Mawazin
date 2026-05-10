@@ -1,7 +1,11 @@
 import num from "../data/data";
 import { Cards } from "../components/Card";
+import { useNavigate } from "react-router-dom";
+
+
 
 function setStorage(id) {
+ 
   let storage = JSON.parse(localStorage.getItem("fav")) || [];
   storage.push(id);
   
@@ -13,6 +17,7 @@ function setStorage(id) {
 
 export function Programes() {
   
+
   return (
     <>
     <ul className="flex gap-15 justify-center items-center">
