@@ -14,6 +14,7 @@ export default function Navbar(){
                     <NavLink to="/programmes">🗓️Programes</NavLink>
                     <NavLink to="/planning">📝Planning</NavLink>
                     <NavLink to="/passeport">📃Passeport</NavLink>
+                    <NavLink to="/login">login</NavLink>
                     
                 </ul>
             </div>

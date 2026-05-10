@@ -1,8 +1,21 @@
 import logo from '../assets/paspor.png'
 import qrCode from '../assets/qrCode.svg'
+import { data, useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 
 
 export const Passeport = () => {
+    const usenavigate = useNavigate();
+    useEffect(()=>{
+        const data = JSON.parse(localStorage.getItem('user')) || {};
+        if(!data || !data?.isLogedIn){
+            usenavigate('/login');
+            return
+            
+        };
+    }, [data])
+        
+
     return(
         <>
             <div className="bg-[#282d67] py-4 px-5 rounded-lg w-96 mx-auto text-white shadow-md shadow-black hover:translate-y-2 hover:scale-[1.05] duration-500">

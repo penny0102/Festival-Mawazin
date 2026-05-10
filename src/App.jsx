@@ -4,6 +4,9 @@ import Navbar from "./components/Navbar";
 import { Programes } from "./pages/Programes";
 import { Planning } from "./pages/Planning";
 import {Passeport} from './pages/Passeport'
+import Login from "./pages/Login";
+import Register from './pages/register'
+
 
 function App() {
   return (
@@ -16,6 +19,8 @@ function App() {
           <Route path="/programmes" element={<Programes />} />
           <Route path="/planning" element={<Planning />} />
           <Route path="/passeport" element={<Passeport/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/register" element={<Register/>}/>
         </Routes>
       </BrowserRouter>
     </>
