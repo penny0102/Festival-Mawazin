@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import { Programes } from "./pages/Programes";
 import { Planning } from "./pages/Planning";
+import {Passeport} from './pages/Passeport'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/programmes" element={<Programes />} />
           <Route path="/planning" element={<Planning />} />
+          <Route path="/passeport" element={<Passeport/>}/>
         </Routes>
       </BrowserRouter>
     </>

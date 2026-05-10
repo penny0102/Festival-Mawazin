@@ -1,6 +1,7 @@
 import num from "../data/data";
 import { Cards } from "../components/Card";
 import { useState, useEffect } from "react";
+import noArtist from '../assets/empty-illustration.png'
 
 
 
@@ -27,7 +28,7 @@ export function Planning() {
   if (!favArtist.length){
     return (
       <div className="flex justify-center ">
-        <p className="text-white text-2xl font-mono">No artist</p>
+        <img className="size-70" src={noArtist} alt="" />
       </div>
     );
   }
@@ -35,8 +36,8 @@ export function Planning() {
   return (
     <>
     
-    <h1 className="flex justify-center tra">Planning Artist</h1>
-    <div className="flex gap-5 justify-center mt-20">
+    <h1 className="flex  justify-center tra">Planning Artist</h1>
+    <div className="flex gap-20 flex-wrap justify-center mt-20">
 
      
       {data.map((favori) => (
